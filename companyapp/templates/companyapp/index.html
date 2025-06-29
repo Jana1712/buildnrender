@@ -1,0 +1,575 @@
+{% extends 'companyapp/base.html' %}
+{% load static %}
+{% block content %}
+
+
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <div
+          id="hero-carousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+        >
+        {% for slider in sliders %}
+
+          <div class="carousel-item active">
+            <img src="{{ slider.image.url }}" alt="" />
+            <div class="carousel-container">
+              <h2>{{ slider.title }}<br /></h2>
+              <p>
+                {{ slider.description }}
+              </p>
+              <a href="#featured-services" class="btn-get-started"
+                >Get Started</a
+              >
+            </div>
+          </div>
+        {% endfor %}  
+          <!-- End Carousel Item -->
+
+    
+
+          <a
+            class="carousel-control-prev"
+            href="#hero-carousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon bi bi-chevron-left"
+              aria-hidden="true"
+            ></span>
+          </a>
+
+          <a
+            class="carousel-control-next"
+            href="#hero-carousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon bi bi-chevron-right"
+              aria-hidden="true"
+            ></span>
+          </a>
+
+          <ol class="carousel-indicators"></ol>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About</h2>
+          <p>
+            At BuildnRender, we believe in turning bold ideas into powerful digital experiences. 
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3>
+                {{about.title}}
+              </h3>
+              <img
+                src="{{about.image1.url}}"
+                class="img-fluid rounded-4 mb-4"
+                alt=""
+              />
+              <p>
+            {{about.description}}
+              </p>
+              
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+              <div class="content ps-0 ps-lg-5">
+                <p class="fst-italic">
+                  {{about.short_description1}}
+                </p>
+                <ul>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >{{about.title_headline1}}</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >{{about.title_headline2}}</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >{{about.title_headline3}}</span
+                    >
+                  </li>
+                </ul>
+                <p>
+                  {{about.short_description2}}
+                </p>
+
+                <div class="position-relative mt-4">
+                  <img
+                    src="{{about.image2.url}}"
+                    class="img-fluid rounded-4"
+                    alt=""
+                  />
+                  <a
+                href="{{about.video}}"
+                    class="glightbox pulsating-play-btn"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Why Us Section -->
+      <section id="why-us" class="why-us section">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card-item">
+                <span>01</span>
+                <h4><a href="" class="stretched-link">One-Stop Digital Partner</a></h4>
+                <p>
+                  We offer web, app, design, video, and marketing services—all in one place to simplify your digital journey.
+                </p>
+              </div>
+            </div>
+            <!-- Card Item -->
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="card-item">
+                <span>02</span>
+                <h4><a href="" class="stretched-link">Client-Focused</a></h4>
+                <p>
+                  We understand your goals, communicate clearly, and deliver tailored solutions that match your vision, timeline, and business needs.
+                </p>
+              </div>
+            </div>
+            <!-- Card Item -->
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-item">
+                <span>03</span>
+                <h4><a href="" class="stretched-link">Reliable Support</a></h4>
+                <p>
+                  We’re here after launch with ongoing updates, maintenance, and guidance to keep your project running smoothly and successfully.
+                </p>
+              </div>
+            </div>
+            <!-- Card Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Why Us Section -->
+
+      <!-- Stats Section -->
+      <section id="stats" class="stats section light-background">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
+            >
+              <i class="bi bi-emoji-smile"></i>
+              <div class="stats-item">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="50"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
+            >
+              <i class="bi bi-journal-richtext"></i>
+              <div class="stats-item">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="200"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Projects</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
+            >
+              <i class="bi bi-headset"></i>
+              <div class="stats-item">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="1463"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
+            >
+              <i class="bi bi-people"></i>
+              <div class="stats-item">
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="10"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+            <!-- End Stats Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Stats Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>
+            At BuildnRender, we provide a full suite of digital services to help your brand succeed
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            {% for service in services %}
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="{{ service.speed }}"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="{{ service.icon_service }}"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>{{ service.title }}</h3>
+                </a>
+                <p>
+                  {{ service.description }}
+                </p>
+              </div>
+            </div>
+
+            {% endfor %}
+
+            <!-- End Service Item -->
+
+
+          
+
+
+
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>
+            We deliver quality digital solutions — from websites and apps to stunning designs and effective marketing.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filters isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-product">Card</li>
+              <li data-filter=".filter-branding">Web</li>
+            </ul>
+            <!-- End Portfolio Filters -->
+
+            <div
+              class="row gy-4 isotope-container"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+
+            {% for portfolio in portfolios %}
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+              >
+                <img
+                  src="{{portfolio.image.url}}"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>{{portfolio.category}}</h4>
+                  <p>{{portfolio.title}}</p>
+                  <a
+                    href="{{portfolio.image.url}}"
+                    title="App 1"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="{% url 'portfolio_detail' portfolio.id %}"
+                    title="More Details"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- End Portfolio Item -->
+
+              {% endfor %}
+
+
+            </div>
+            <!-- End Portfolio Container -->
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+
+      <!-- Team Section -->
+      <section id="team" class="team section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p>
+            We are a group of innovative, experienced, and proficient teams. You will love to collaborate with us.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-5">
+
+          {% for team in teams %}  
+
+            <div
+              class="col-xl-4 col-md-6 d-flex"
+              data-aos="zoom-in"
+              data-aos-delay="{{ team.speed }}"
+            >
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="{{ team.image.url }}"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <div class="social">
+                    <a href="{{ team.url_x }}"><i class="bi bi-twitter-x"></i></a>
+                    <a href="{{ team.url_facebook }}"><i class="bi bi-facebook"></i></a>
+                    <a href="{{ team.url_instagram }}"><i class="bi bi-instagram"></i></a>
+                    <a href="{{ team.url_linkedin }}"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                  <h4>{{ team.fullname }}</h4>
+                  <span>{{ team.role_company }}</span>
+                </div>
+              </div>
+            </div>
+
+            {% endfor %}
+
+            <!-- End Team Member -->
+
+
+
+          </div>
+        </div>
+      </section>
+      <!-- /Team Section -->
+
+      <!-- Faq Section -->
+      <section id="faq" class="faq section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Welcome to our FAQ page, your one-stop resource for answers to commonly asked questions.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+
+          {% for faq in faqs %}
+
+          <div class="row faq-item" data-aos="fade-up" data-aos-delay="{{ faq.speed }}">
+            <div class="col-lg-5 d-flex">
+              <i class="bi bi-question-circle"></i>
+              <h4>{{ faq.question }}</h4>
+            </div>
+            <div class="col-lg-7">
+              <p>
+                {{faq.reply}}
+              </p>
+            </div>
+          </div>
+
+          {% endfor %}
+
+          <!-- End F.A.Q Item-->
+
+        </div>
+      </section>
+      <!-- /Faq Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>
+            Let’s collaborate and build your future together. Reach out to us today!
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-6">
+              <div
+                class="info-item d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <i class="bi bi-geo-alt"></i>
+                <h3>Address</h3>
+                <p>{{ generalsetting.address }}</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="info-item d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <i class="bi bi-telephone"></i>
+                <h3>Call Us</h3>
+                <p>{{ generalsetting.phone }}</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+
+            <div class="col-lg-3 col-md-6">
+              <div
+                class="info-item d-flex flex-column justify-content-center align-items-center"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <i class="bi bi-envelope"></i>
+                <h3>Email Us</h3>
+                <p>{{ generalsetting.email2 }}</p>
+              </div>
+            </div>
+            <!-- End Info Item -->
+          </div>
+
+          <form
+            action="{% url 'contact' %}"
+            method="post"
+          
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+
+          {% csrf_token %}
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  
+                />
+              </div>
+
+              <div class="col-md-6">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Your Email"
+                  
+                />
+              </div>
+
+              <div class="col-md-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="subject"
+                  placeholder="Subject"
+                  
+                />
+              </div>
+
+              <div class="col-md-12">
+                <textarea
+                  class="form-control"
+                  name="message"
+                  rows="6"
+                  placeholder="Message"
+                  
+                ></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+             
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </div>
+          </form>
+          <!-- End Contact Form -->
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    
+ {% endblock %}     

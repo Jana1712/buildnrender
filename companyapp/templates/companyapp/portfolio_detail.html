@@ -1,0 +1,105 @@
+{% extends 'companyapp/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+  <div class="heading">
+    <div class="container">
+      <div class="row d-flex justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1>{{portfolio_detail.title}}</h1>
+          <p class="mb-0">{{portfolio_detail.short_description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="{% url 'home'%}">Home</a></li>
+        <li class="current">Portfolio Details</li>
+      </ol>
+    </div>
+  </nav>
+</div>
+<!-- End Page Title -->
+
+<!-- Portfolio Details Section -->
+<section id="portfolio-details" class="portfolio-details section">
+  <div class="container" data-aos="fade-up">
+    <div class="portfolio-details-slider swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "navigation": {
+            "nextEl": ".swiper-button-next",
+            "prevEl": ".swiper-button-prev"
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper align-items-center">
+        <div class="swiper-slide">
+          <img src="{{portfolio_detail.image.url}}" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="{{portfolio_detail.image.url}}" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="{{portfolio_detail.image.url}}" alt="" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="{{portfolio_detail.image.url}}" alt="" />
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="row justify-content-between gy-4 mt-4">
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="portfolio-description">
+          <h2>{{portfolio_detail.title}}</h2>
+          <p>{{portfolio_detail.description}}</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-info">
+          <h3>Project information</h3>
+          <ul>
+            <li><strong>Category</strong> {{ portfolio_detail.category }}</li>
+            <li><strong>Client</strong> {{ portfolio_detail.clients }}</li>
+            <li><strong>Project date</strong> 01 March, 2020</li>
+            <li><strong>Project URL</strong></li>
+            <li href="#">{{ portfolio_detail.url }}</li>
+            <li>
+              <a href="{{ portfolio_detail.url }}" class="btn-visit align-self-start">Visit Website</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Portfolio Details Section -->
+
+
+
+
+ {% endblock %}  
